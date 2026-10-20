@@ -1,0 +1,12 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+data/
+*.db
+*.joblib
+node_modules/
+clients/typescript/dist/
+.venv/
