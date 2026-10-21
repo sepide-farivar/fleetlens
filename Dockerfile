@@ -1,7 +1,7 @@
 # ---- build stage: install deps, fetch data, run ETL and train the model ----
 FROM python:3.12-slim AS build
 WORKDIR /app
-ENV PIP_NO_CACHE_DIR=1 PYTHONDONTWRITEBYTECODE=1
+ENV PIP_NO_CACHE_DIR=1 PYTHONDONTWRITEBYTECODE=1 FLEETLENS_DATA_DIR=/app/data
 COPY pyproject.toml README.md ./
 COPY src ./src
 RUN pip install --prefix=/install . && pip install .
